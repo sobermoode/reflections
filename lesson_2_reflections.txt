@@ -1,0 +1,27 @@
+Q: What happens when you initialize a repository? Why do you need to do it?
+
+A: when a repository is initialized, a hidden .git folder is created within the directory
+you made the initialization in. this folder will then contain the log of all the git
+snapshots of your project. by default, none of the files currently within the directory
+that you initialize the git repository in will be committed to the repository. 
+initializing the repository creates a blank slate for you to begin your project with.
+you can specify the files you want to track by adding them to the repository and start
+adding log messages to help track the development of the project.
+
+
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+A: the repository contains all of the snapshots of your project that youve committed. files that are
+in your working directory and have been edited can be part of any commit that you make to the
+repository. however, not every file in the working directory may need to be edited before a commit
+is made. all files being tracked by the repository will be added to the commit, though. for 
+any given commit, some files in the working directory may or may not be added to the repository for
+that commit, if they are not being tracked at the time. the staging area doesnt really "contain" files.
+it is a temporary batters box where the files that are going to be committed are placed before 
+the actual commit is made. before making a commit, it is a good idea to see which files youve edited,
+which files the repository is tracking, and make sure that all the files that need to be committed are
+being tracked, as well as possibly removing any files that it isnt necessary to continue tracking. 
+the staging area is a useful tool for this. it allows you to maintain a high-magnification look at
+the detail of your repository and how commits will affect it.
+
+
