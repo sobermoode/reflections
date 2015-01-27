@@ -1,0 +1,83 @@
+Q: How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+A: since the diff command will only show you what has changed between the two files,
+it pinpoints the places where you edited the file. most of the edits were likely
+intentional, but could nonetheless have been done incorrectly. some edits may have
+been made unintentionally, like when your cat jumped up on your lap while you were
+working. if you save your files often and have many versions to refer back to, it
+becomes easier to spot unintentional errors that you might not have known to look for,
+and otherwise might have spent long hours hunting for.
+
+
+Q: How could having easy access to the entire history of a file make you a more efficient programmer
+in the long term?
+
+A: once you get into the habit of saving your files often, you will be creating this
+resource of old files for yourself. you might not necessarily be looking for an error,
+but may find it useful to track changes over time, or just do a kind of retrospective
+of how your project has evolved. the more you save (or upload to dropbox, google docs, etc.)
+the less time you will spend finding errors or running specific tests with specific 
+versions of your project.
+
+
+Q: What do you think are the pros and cons of manually choosing when to create a commit, 
+like you do in Git, vs having versions automatically saved, like Google docs does?
+
+A: the highest-level problem with manual commits is that maybe you'll overthink it.
+you might spend an undue amount of time contemplating when to commit when working on a
+feature, or worry that every time you change something that you should have committed it.
+i like the solution that was presented in the lesson that the two important things to think
+about while working, is if 1) the changes you made comprise a single logical edit, or
+2) its been a while, and better safe than sorry, even if the commit point isn't fully-featured.
+and this can also turn into a subjectivity whirlpool. if you've plotted your project into clear
+milestones and then into precise objectives, it should be easier to go into a project knowing
+when you've reached a logical commit point. the more you work on projects that won't be completed
+in one day, or that have many interrelated parts, or have more than one person working on them,
+the easier it will be to determine when you've gotten to a point where it would make sense
+to commit the changes you've made, so as to create a useful comparison point to previous versions,
+as well as future versions.
+
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one 
+commit, while others, like Google Docs, treat each file separately?
+
+A: as the name implies, google docs is for the creation and maintenance of documents. you might 
+have several documents on google docs that share interrelated data and attempt to mainain a 
+project by updating each document individually. this project-oriented approach to document-
+maintenance is exactly what git is designed for. it knows which files are all interrelated 
+in your project - ie., html, css, javascript, etc. - and will include them in a commit, even if 
+any single of of those documents wasn't edited in any way. this maintains the whole of the project, 
+without the developer having to remember to update each file manually.
+
+
+Q: How can you use the commands git log and git diff to view the history of files?
+
+A: it's a measure of granularity. git log shows a history on a macro scale; it is a timeline 
+of the commits sorted by time, starting with the most recent, which reflects edits to all of the 
+files contained within the repository. git diff breaks the commits down to a finer scale; you can 
+inspect individual files within the repository and identify specific edits that correlate to 
+a specific implementation of a feature, or something else.
+
+
+Q: How might using version control make you more confident to make changes that could break something?
+
+A: since your complete project, no matter how many files the repository contains, is updated when you 
+make a commit, if you are sure that your project is in a working state when making a commit, you can be
+confident that when rolling back to that commit, you can always test the last fully-functional version. 
+at that point, you can make changes and not have to worry that you'll reach a point where you've broken
+your project beyond reparability. the commit that contains the last fully-functional version of your
+project can always be returned to with a simple "git checkout," and you can always be confident in 
+experimenting and testing new features without worrying that you won't be able to return to a point 
+where your project "just worked."
+
+
+Q: Now that you have your workspace set up, what do you want to try using Git for?
+
+A: really, the possibilities are endless. the first scenarios that come to mind are development projects, 
+ie., web design projects or an iOS app that you are developing. but you could also use it while working on
+a short story or novel. you might also use it for an art project. any scenario provides for the ability to 
+return to specific points in the history of the project as a kind of retrospective. but, more useful to a 
+development standpoint, it also allows you to explore thoughts and experiments and then include the things 
+that work, while being confident that the things you don't like won't affect the overall outcome of your 
+project. i can see myself using git for all of these scenarios.
+
