@@ -1,0 +1,16 @@
+Q: When would you want to use a remote repository rather than keeping all your work local?
+
+A: Using a remote repository would be a good idea whenever you wanted to open up your project 
+to outside collaboration, or if you knew you would need to access your project from another 
+machine. In the first instance, you might ask for assistance in solving a problem and invite 
+others to add solutions to your project. Or, you might develop a project locally, 
+and then decide to release it as open-source, to allow anyone to make changes to the master 
+branch, or continue to add their own features and customizations in their own branches 
+(which you could then incorporate back into your own branch). In the second instance, you 
+might be working on your project from home on a desktop machine, and you don't have a laptop, 
+and you have to go to a friend's house, but you know your friend has another desktop computer 
+that you can use. You can create a remote repository and then clone your project onto your 
+friend's computer. You can continue to work on the project on your friend's computer, 
+commit your work to the remote, and then pull that content back onto your own machine once 
+you get home.
+
