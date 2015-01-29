@@ -25,3 +25,56 @@ the staging area is a useful tool for this. it allows you to maintain a high-mag
 the detail of your repository and how commits will affect it.
 
 
+Q: How can you use the staging area to make sure you have one commit per logical change?
+
+A: you can use the "git diff --staged" command to compare the state of the files in the staging 
+area to those in the most recent commit. if there arent very many changes in the file in the 
+staging area, or if the changes dont result in anything meaningful, then you can tell that you 
+arent in a logical place to make a commit. 
+
+
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A: branches are useful when you need to work on something specific, but want to keep your current fully-functional 
+version still functional. you may have thought of a new feature to add to a game or a new level that you 
+want to test out. it would be a good idea to branch the project at this point, so that you could experiment
+with the new feature free from worry of breaking something that used to work, and then having to checkout an 
+earlier commit to continue the project, thereby losing any work you did on the experimental new feature. 
+the same situation could arise when adding the new level to the game. or, you could be working on a seating 
+arrangement for a wedding reception. halfway through, a bunch of new RSVPs come in, or you decide that youd 
+rather put all of your friends at the main table instead of your in-laws. before making changes to the "perfect" 
+seating chart, youd branch the project in case your fiancee didnt think your new plan was very well thought out. 
+this way, you could revert to the original arrangement without having to remember where everyone was sitting.
+
+
+Q: How do the diagrams help you visualize the branch structure?
+
+A: the diagrams are a great way to visualize branch structure, because all at once, you can (reasonably) see 
+how many branches there are, how many commits are in each branch, and whether or not there are any 
+unreachable commits. it might be a lot more difficult (or at least, youd have to get a lot more comfortable 
+"seeing the matrix") if you were only looking at the git log.
+
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+A: by merging two branches together, all of the commits made to each branch become part of the same branch 
+(the branch that is currently checked out). the commits all become part of the same log, sorted by timestamp. 
+after the initial merge, the new head has two parents: the most recent commits from both branches. so, in the 
+diagram, both branches come out to a single point that represents the new head (which, in turn, is pointing 
+back to two previous commits). if you then went ahead and deleted the branch you just merged, its label 
+would disappear, but all of the commits that were under that label would still be part of the new log that 
+contains all the commits from both branches.
+
+
+Q: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+A: git is obviously not foolproof. it cant guess at what any two (or more) people intend for any part of the project 
+they make changes to. when git attempts to determine where changes have been made, it cant always make the "correct"
+call, which in this case, is what the project developers intend with their changes, not necessarily just to include 
+what was added and to delete what was removed. so it might make sense from this viewpoint that making a merge manually
+would always be the best way to go, since the developers would always have to resolve gits conflicts anyway. but, 
+its more likely that git will stumble over minor things, especially when the project is broken down into logical
+chunks, and the developers are making regular and logical commits. when there are enough commits and each one is 
+logically different from one another, there will likely be less conflicts, and the developers as a whole can trust
+that git wont always be stumbling over conflicts it cant understand correctly.
+
